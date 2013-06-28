@@ -1,0 +1,140 @@
+@size: 4rem;
+@mailColor: #171515;
+@twitterColor: #05ADE7;
+@githubColor: #171515;
+@facebookColor: #3C5A93;
+@linkedinColor: #047DB2;
+@skypeColor: #05B2ED;
+@gplusColor: #DA4835;
+@rssColor: #FA9D39;
+@transitionSpeed: .3s;
+
+.social.icon-button {
+	background-color: white;
+	.border-radius(@size);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 3.0rem;
+	width: @size;
+	height: @size;
+	line-height: @size;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+
+	& span {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		height: 0;
+
+		.border-radius(0);
+		.transition(all @transitionSpeed);
+	}
+
+	&:hover {
+		i {
+			color: white !important;
+		}
+		span {
+			width: @size;
+			height: @size;
+			margin: -(@size/2);
+			.border-radius(@size);
+		}
+	}
+
+	& i {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: @size;
+		height: @size;
+		z-index: 10;
+		background: none;
+		color: white;
+		line-height: @size;
+		.transition(all @transitionSpeed);
+	}
+
+
+	& + .tooltip.in {
+		opacity: 1;
+	}
+
+	&.mail {
+		& i {	color: @mailColor; }
+		& span { background-color: @mailColor; }
+
+		& + .tooltip .tooltip-inner { background-color: @mailColor; }
+		& + .tooltip .tooltip-arrow { border-bottom-color: @mailColor; }
+	}
+
+	&.twitter {
+		& i { color: @twitterColor; }
+		& span { background-color: @twitterColor; }
+
+		& + .tooltip .tooltip-inner { background-color: @twitterColor; }
+		& + .tooltip .tooltip-arrow { border-bottom-color: @twitterColor; }
+
+	}
+
+	&.github {
+		& i { color: @githubColor; }
+		& span { background-color: @githubColor; }
+
+		& + .tooltip .tooltip-inner { background-color: @githubColor; }
+		& + .tooltip .tooltip-arrow { border-bottom-color: @githubColor; }
+	}
+
+	&.facebook {
+		& i { color: @facebookColor; }
+		& span { background-color: @facebookColor; }
+
+		& + .tooltip .tooltip-inner { background-color: @facebookColor; }
+		& + .tooltip .tooltip-arrow { border-bottom-color: @facebookColor; }
+	}
+
+	&.linkedin {
+		& i { color: @linkedinColor; }
+		& span { background-color: @linkedinColor; }
+
+		& + .tooltip .tooltip-inner { background-color: @linkedinColor; }
+		& + .tooltip .tooltip-arrow { border-bottom-color: @linkedinColor; }
+	}
+
+	&.skype {
+		& i { color: @skypeColor; }
+		& span { background-color: @skypeColor; }
+
+		& + .tooltip .tooltip-inner { background-color: @skypeColor; }
+		& + .tooltip .tooltip-arrow { border-bottom-color: @skypeColor; }
+	}
+
+	&.google-plus {
+		& i { color: @gplusColor; }
+		& span { background-color: @gplusColor; }
+
+		& + .tooltip .tooltip-inner { background-color: @gplusColor; }
+		& + .tooltip .tooltip-arrow { border-bottom-color: @gplusColor; }
+	}
+
+	&.rss {
+		& i { color: @rssColor; }
+		& span { background-color: @rssColor; }
+
+		& + .tooltip .tooltip-inner { background-color: @rssColor; }
+		& + .tooltip .tooltip-arrow { border-bottom-color: @rssColor; }
+	}
+}
+
+
+.icon-mail {
+	.icon-envelope;
+	&:before {
+			content:"\f003";;
+	}
+
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html ng-app="Olyckne">
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Mattias Lyckne - Developer</title>
+      <link rel="author" href="humans.txt">
+		<!-- <base href="src/"> -->
+		<!-- build:css(src) css/style.css -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="components/Olightbox/docs/olightbox.jquery.min.css">
+		<!-- endbuild -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
+
+    </head>
+    <body>
+			<div class="container-fluid" ng-controller="UserCtrl">
+				<div class="hero-unit">
+					<div class="row-fluid">
+						<div class="span6">
+							<div class="row-fluid">
+								<a target="_self" href=" " class="site-logo pull-left">
+									<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Mattias Lyckne logo">
+								</a>
+								<h1>{{user.firstname}} {{user.lastname}}</h1>
+								<p class="phonenumber">{{user.phonenumber}}</p>
+							</div>
+
+							<div class="row-fluid" ng-controller="UserCtrl" ng-include src="'_partials/user.html'"></div>
+						</div>
+						<div class="span6" ng-controller="ProjectCtrl" ng-include src="'_partials/projects.html'" ></div>
+					</div>
+				</div>
+			</div>
+
+		<!-- build:js(src) js/script.js -->
+		<script src="components/angular/angular.js"></script>
+		<script src="components/angular-resource/angular-resource.js"></script>
+		<script src="components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script src="components/jquery/jquery.js"></script>
+		<script src="components/underscore/underscore.js"></script>
+		<script src="components/Olightbox/olightbox.jquery.js"></script>
+		<script src="components/flatstrap/assets/js/bootstrap-tooltip.js"></script>
+
+		<script src="js/main.js"></script>
+		<script src="js/controllers/userCtrl.js"></script>
+		<script src="js/controllers/projectCtrl.js"></script>
+		<!-- endbuild -->
+    </body>
+</html>

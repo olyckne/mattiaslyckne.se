@@ -1,0 +1,34 @@
+<h3>
+	Projects
+	<a target="_self" href="/feed.php" class="social icon-button rss pull-right"
+		data-toggle="tooltip" title="RSS">
+		<i class="icon-rss"></i>
+		<span></span>
+	</a>
+</h3>
+
+<div class="row-fluid">
+	<div class="span12">
+		<accordion close-others="oneAtATime">
+			<accordion-group ng-repeat="group in groups" is-open="group.open">
+				<accordion-heading>
+					{{group.title}}
+					<small class="visible-desktop muted pull-right">
+						{{group.lang}}
+					</small>
+				</accordion-heading>
+				<blockquote>
+				<p ng-bind-html-unsafe="group.content"></p>
+				<a ng-repeat="image in group.images"
+					href="{{ image.image }}" data-toggle="olightbox">
+						<img ng-src="{{ image.thumbnail }}">
+				</a>
+				<br>
+				<small>
+					<a href="{{group.url}}" target="_blank">{{group.url}}</a>
+				</small>
+				</blockquote>
+			</accordion-group>
+		</accordion>
+	</div>
+</div>

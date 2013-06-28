@@ -1,0 +1,61 @@
+@import "../components/flatstrap/assets/less/bootstrap";
+@import "../components/flatstrap/assets/less/responsive";
+// @import "../components/font-awesome/less/font-awesome";
+
+.site-logo img {
+	background: url(../img/logo.svg) no-repeat;
+	width: 241px;
+	height: 200px;
+	opacity: .8;
+	background-size: 240px 200px;
+}
+
+a {
+	color: #009190;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.phonenumber {
+	margin-top: 5px;
+
+}
+
+.hero-unit {
+	background-color: white;
+	padding: 20px;
+
+	h1 {
+		white-space: pre-line;
+	}
+}
+
+.span1 {
+	text-align: center;
+}
+
+.username {
+	opacity: 0;
+	visibility: hidden;
+	-moz-transition: opacity .25s linear, visibility .1s linear .5s;
+	-webkit-transition: opacity .25s linear, visibility .1s linear .5s;
+	-o-transition: opacity .25s linear, visibility .1s linear .5s;
+	transition: opacity .25s linear, visibility .1s linear .5s;
+}
+
+.social+.span1 {
+	margin-left: 25px;
+}
+
+.social {
+	opacity: .6;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+@import "icons.less";

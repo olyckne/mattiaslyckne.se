@@ -1,0 +1,6 @@
+<p>Developing applications for your browser and phone.</p>
+<a target="_blank" class="social icon-button {{ contact.type.name | lowercase }}" ng-href="{{contact.type.url}}" data-toggle="tooltip" title="{{contact.info}}" ng-repeat="contact in user.contactInfo">
+
+		<i class="icon-{{ contact.type.name | lowercase }}"></i>
+		<span></span>
+</a>
