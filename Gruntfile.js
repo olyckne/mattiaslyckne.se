@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             files: [
                { expand: true, cwd: 'src/', src: [
                   '.htaccess', '_partials/**',
-                  'css/**', 'img/**', 'index.html',
+                  'img/**', 'index.html',
                   'components/font-awesome',
                   'feed.php'
                ],
@@ -50,6 +50,11 @@ module.exports = function(grunt) {
       usemin: {
         html: 'dist/index.html'
       },
+      cssmin: {
+         minify: {
+            expand: true
+         }
+      },
       concat: {
          options: {
             separator: ""
@@ -57,7 +62,7 @@ module.exports = function(grunt) {
       },
       uglify: {
          options: {
-            beautify: true,
+            beautify: false,
             mangle: false
          }
       },
@@ -87,5 +92,5 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-usemin');
 
     // Default task
-   grunt.registerTask('default', ['clean', 'copy', 'less', 'useminPrepare', 'concat', 'uglify', 'usemin']);
+   grunt.registerTask('default', ['clean', 'copy', 'less', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin']);
 };
