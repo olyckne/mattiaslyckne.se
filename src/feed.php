@@ -2,7 +2,7 @@
 	date_default_timezone_set("Europe/Stockholm");
 	header("Content-Type: application/rss+xml; charset=UTF-8");
 
-	$apiUrl = "http://api.mattiaslyckne.se/users/olyckne/projects";
+	$apiUrl = "http://api.mattiaslyckne.se/users/olyckne/projects?sort=desc";
 	$baseUrl = "http://mattiaslyckne.se";
 
 	$ch = curl_init($apiUrl);
@@ -15,6 +15,7 @@
 	curl_close($ch);
 
 	$projects =  json_decode($response, true);
+
 
 ?>
 <?xml version="1.0" encoding="UTF-8"?>
