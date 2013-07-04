@@ -80,13 +80,19 @@ module.exports = function(grunt) {
       },
 
       replace: {
-         relase: {
-            src: ['dist/index.html'],
+         release: {
+            src: ['dist/index.html', 'dist/js/script.js'],
             overwrite: true,
-            replacements: [{
-               from: 'base href="/src/"',
-               to: 'base href="/"'
-            }]
+            replacements: [
+               {
+                  from: 'base href="/src/"',
+                  to: 'base href="/"'
+               },
+               {
+                  from: 'localhost:8888',
+                  to: 'api.mattiaslyckne.se'
+               }
+            ]
          }
       }
    });
