@@ -7,6 +7,7 @@
 @skypeColor: #05B2ED;
 @gplusColor: #DA4835;
 @rssColor: #FA9D39;
+@blogColor: #77AFC8;
 @transitionSpeed: .3s;
 
 .social.icon-button {
@@ -128,6 +129,14 @@
 		& + .tooltip .tooltip-inner { background-color: @rssColor; }
 		& + .tooltip .tooltip-arrow { border-bottom-color: @rssColor; }
 	}
+
+	&.blog {
+		& i { color: @blogColor; }
+		& span { background-color: @blogColor; }
+
+		& + .tooltip .tooltip-inner { background-color: @blogColor; }
+		& + .tooltip .tooltip-arrow { border-bottom-color: @blogColor; }
+	}
 }
 
 
@@ -137,4 +146,17 @@
 			content:"\f003";;
 	}
 
+}
+
+.icon-blog {
+	.icon-book;
+
+	font-size: .6em;
+
+	&:after {
+		content: "\f040";
+	}
+	&:before {
+		content: "\f02d";
+	}
 }
