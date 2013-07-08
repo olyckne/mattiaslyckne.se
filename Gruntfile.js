@@ -36,10 +36,10 @@ module.exports = function(grunt) {
          release: {
             options: {
                paths: ['src/less'],
-               compress: false
+               compress: true
             },
             files: {
-               'src/css/style.css': 'src/less/style.less'
+               'dist/css/style.css': 'src/less/style.less'
             }
          }
       },
