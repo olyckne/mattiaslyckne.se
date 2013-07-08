@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                },
                {
                   expand: true, src: [
-                     '_git_hook.php', 'bootstrap.sh'
+                     '_git_hook.php'
                   ],
                      dest: 'dist/'
                }
