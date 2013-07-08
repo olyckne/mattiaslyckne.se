@@ -36,10 +36,6 @@ app.controller('UserCtrl',
 		$(".username-"+elem).show();
 	};
 
-	$scope.getInfo = function(type) {
-
-	};
-
 	$scope.usernameTooltip = function() {
 		$(".social").tooltip({
 			placement: "bottom"

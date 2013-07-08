@@ -26,7 +26,6 @@ module.exports = function(grunt) {
                { expand: true, cwd: 'src/', src: [
                   '.htaccess', '_partials/**',
                   'img/**', 'index.html',
-                  'components/font-awesome',
                   'feed.php'
                ],
                dest: 'dist/' }
