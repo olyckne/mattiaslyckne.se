@@ -28,7 +28,14 @@ module.exports = function(grunt) {
                   'img/**', 'index.html',
                   'feed.php'
                ],
-               dest: 'dist/' }
+                  dest: 'dist/'
+               },
+               {
+                  expand: true, src: [
+                     '_git_hook.php', 'bootstrap.sh'
+                  ],
+                     dest: 'dist/'
+               }
             ]
          }
       },
