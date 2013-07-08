@@ -19,8 +19,17 @@ app.controller('UserCtrl',
 			$scope.usernameTooltip();
 		})
 		.error(function(data, status) {
+			var alert = $('<div />'),
+				closeBtn = $('<button />').addClass('close').text('x');
+
 			console.log(data, status);
 
+			alert.addClass('alert alert-danger')
+					.html('Ooop, something went wrong fetching data');
+			alert.append(closeBtn);
+
+			if(!$(".alert").length)
+				$(".container-fluid").prepend(alert);
 	});
 
 	$scope.showUsername = function(elem) {
