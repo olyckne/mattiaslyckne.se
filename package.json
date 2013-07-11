@@ -11,6 +11,12 @@
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-cssmin": "~0.6.1",
-    "grunt-text-replace": "~0.3.6"
+    "grunt-text-replace": "~0.3.6",
+    "karma": "~0.8.6",
+    "grunt-karma": "~0.4.5"
+  },
+
+  "scripts": {
+    "test" : "./node_modules/.bin/karma start --single-run --browsers PhantomJS tests/karma.config.js"
   }
 }

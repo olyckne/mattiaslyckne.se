@@ -82,6 +82,10 @@ module.exports = function(grunt) {
          },
          other: {
             files: ['src/js/*', 'src/index.html']
+         },
+         karma: {
+            files: ['src/js/*.js', 'tests/*.test.js'],
+            tasks: ['karma:unit:run']
          }
       },
 
@@ -100,6 +104,18 @@ module.exports = function(grunt) {
                }
             ]
          }
+      },
+
+      karma: {
+         unit: {
+            configFile: 'tests/karma.config.js',
+            background: true
+         },
+         continuous: {
+            configFile: 'tests/karma.config.js',
+            singleRun: true,
+            browsers: ['PhantomJS']
+         }
       }
    });
 
@@ -115,6 +131,8 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-usemin');
    grunt.loadNpmTasks('grunt-text-replace');
 
+   grunt.loadNpmTasks('grunt-karma');
+
     // Default task
-   grunt.registerTask('default', ['clean', 'copy', 'less', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'replace']);
+   grunt.registerTask('default', ['grunt-karma:continuous', 'clean', 'copy', 'less', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'replace']);
 };
