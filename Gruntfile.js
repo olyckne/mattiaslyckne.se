@@ -134,5 +134,5 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-karma');
 
     // Default task
-   grunt.registerTask('default', ['grunt-karma:continuous', 'clean', 'copy', 'less', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'replace']);
+   grunt.registerTask('default', ['karma:continuous', 'clean', 'copy', 'less', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'replace']);
 };
