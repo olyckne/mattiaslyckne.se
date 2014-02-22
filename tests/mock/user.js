@@ -15,6 +15,10 @@ angular.module('mockUser', [])
 			{
 				"info": "@MattiasLyckne",
 				"type": { "name": "Twitter", "url": "https://twitter.com/@MattiasLyckne" }
-			}
+			},
+            {
+                "info": "hi@mattiaslyckne.se",
+                "type": { "name": "Mail", "url": "mailto:hi@mattiaslyckne.se" }
+            }
 		]
 });
