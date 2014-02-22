@@ -17,7 +17,7 @@
 					</small>
 				</accordion-heading>
 				<blockquote>
-				<p ng-bind-html-unsafe="group.content"></p>
+				<p ng-bind-html="group.content"></p>
 				<a ng-repeat="image in group.images"
 					href="{{ image.image }}" data-toggle="olightbox">
 						<img ng-src="{{ image.thumbnail }}">

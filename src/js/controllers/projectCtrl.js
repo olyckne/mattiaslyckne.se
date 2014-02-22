@@ -1,6 +1,6 @@
 app.controller('ProjectCtrl',
-	['$scope', '$http', '$filter', '$location',
-	function($scope, $http, $filter, $location) {
+	['$scope', '$http', '$filter', '$location', '$sce',
+	function($scope, $http, $filter, $location, $sce) {
 	$scope.oneAtATime = true;
 
 	$http({method: 'JSONP', url: baseUrl+'users/olyckne/projects', params: {callback : 'JSON_CALLBACK'}})
@@ -13,7 +13,7 @@ app.controller('ProjectCtrl',
 					id: item.id,
 					title: item.title,
 					lang: item.lang,
-					content: item.content,
+					content: $sce.trustAsHtml(item.content),
 					url: item.url,
 					images: item.images,
 					open: false
