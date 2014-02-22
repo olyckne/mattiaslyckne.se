@@ -9,6 +9,9 @@ app.controller('UserCtrl',
 	$http({method: $scope.method, url: $scope.url+"/contactinfo", params: {callback: 'JSON_CALLBACK'}})
 		.success(function(data, status) {
 			$scope.user = data;
+			
+			$scope.user.name = data.firstname+" "+data.lastname;
+
 			$scope.user.contactInfo = _.filter(data.contact_info, function(item) {
 				return item.type.name !== "Phone";
 			});
