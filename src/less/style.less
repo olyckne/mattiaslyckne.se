@@ -3,6 +3,7 @@
 
 @icon-font-path:  "../../../../components/bootstrap/fonts/";
 @import "icons.less";
+@import "variables";
 
 .site-logo img {
 	background: url(../img/logo.svg) no-repeat;
@@ -13,7 +14,7 @@
 }
 
 a {
-	color: #009190;
+	color: #009190 !important;
 	text-decoration: none;
 
 	&:hover {
@@ -34,9 +35,9 @@ a {
     margin-right: 20px;
 }
 
-.hero-unit {
+.jumbotron {
 	background-color: white;
-	padding: 20px;
+	padding: 40px;
 
 	h1 {
 		white-space: pre-line;
@@ -66,4 +67,14 @@ a {
 	&:hover {
 		opacity: 1;
 	}
+}
+
+.panel-title {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    
+    a {
+        cursor: pointer;
+    }
 }
