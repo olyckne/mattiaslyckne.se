@@ -27,9 +27,7 @@
 					<div class="row-fluid">
 						<div class="span6">
 							<div class="row-fluid">
-								<a target="_self" href=" " class="site-logo pull-left">
-									<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Mattias Lyckne logo">
-								</a>
+                                <img class="gravatar pull-left" ng-src="{{user.gravatar}}">
                                 <h1 ng-bind="user.name"></h1>
 							</div>
 
@@ -56,6 +54,7 @@
 
 		</script>
 		<!-- build:js(src) js/script.js -->
+        <script src="components/js-md5/js/md5.min.js"></script>
         <script src="components/angular/angular.js"></script>
 		<script src="components/angular-resource/angular-resource.js"></script>
 		<script src="components/angular-sanitize/angular-sanitize.js"></script>

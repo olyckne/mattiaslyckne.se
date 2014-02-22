@@ -16,13 +16,15 @@ app.controller('UserCtrl',
 				return item.type.name !== "Phone";
 			});
 
+            var mail =  $scope.findContactInfoByType($scope.user.contactInfo, "Mail").info;
+
+
+            $scope.user.gravatar = $scope.getGravatar(mail, 200);
 			$scope.usernameTooltip();
 		})
 		.error(function(data, status) {
 			var alert = $('<div />'),
 				closeBtn = $('<button />').addClass('close').text('x');
-
-			console.log(data, status);
 
 			alert.addClass('alert alert-danger')
 					.html('Ooop, something went wrong fetching data');
@@ -41,5 +43,15 @@ app.controller('UserCtrl',
 			placement: "bottom"
 		});
 	};
+
+	$scope.getGravatar = function(mail, size) {
+        return "http://gravatar.com/avatar/"+md5(mail.trim().toLowerCase())+"?s="+size;
+    }
+
+    $scope.findContactInfoByType = function(data, type) {
+        return _.find(data, function(item) {
+            return item.type.name === type;
+        });
+    }
 
 }]);
