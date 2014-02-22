@@ -19,8 +19,8 @@ describe("User Controller", function() {
 			'http://localhost:8888/users/olyckne/contactinfo?callback=JSON_CALLBACK')
 			.respond(200, $injector.get('userMockJSON'));
 
-		var controller = createController();
-		$httpBackend.flush();
+		    var controller = createController();
+		    $httpBackend.flush();
 		});
 	});
 

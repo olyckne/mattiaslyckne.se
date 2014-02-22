@@ -18,8 +18,8 @@ files = [
 	"components/jquery/jquery.js",
 	"components/underscore/underscore.js",
 	"components/olightbox/olightbox.jquery.js",
-	"components/flatstrap/assets/js/bootstrap-tooltip.js",
     "components/js-md5/js/md5.min.js",
+    "components/bootstrap/dist/js/bootstrap.min.js",
 
 	"js/main.js",
 	"js/controllers/userCtrl.js",

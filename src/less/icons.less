@@ -12,7 +12,7 @@
 
 .social.icon-button {
 	background-color: white;
-	.border-radius(@size);
+	border-radius: @size;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 3.0rem;
@@ -31,7 +31,7 @@
 		width: 0;
 		height: 0;
 
-		.border-radius(0);
+		border-radius: 0;
 		.transition(all @transitionSpeed);
 	}
 
@@ -43,7 +43,7 @@
 			width: @size;
 			height: @size;
 			margin: -(@size/2);
-			.border-radius(@size);
+			border-radius: @size;
 		}
 	}
 
@@ -141,7 +141,7 @@
 
 
 .icon-mail {
-	.icon-envelope;
+	.glyphicon-envelope;
 	&:before {
 			content:"\f003";;
 	}
@@ -149,7 +149,7 @@
 }
 
 .icon-blog {
-	.icon-book;
+	.glyphicon-book;
 
 	font-size: .6em;
 
