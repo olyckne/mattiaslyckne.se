@@ -1,18 +1,25 @@
 <!doctype html>
 <html ng-app="Olyckne">
     <head>
-      <meta charset="utf-8">
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Mattias Lyckne - Developer</title>
-	  <base href="/src/">
-	  <link rel="author" href="humans.txt">
-		<!-- build:css(src) css/style.css -->
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="components/olightbox/docs/olightbox.jquery.min.css">
-		<!-- endbuild -->
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
-
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mattias Lyckne - Developer</title>
+        <base href="/">
+        <link rel="author" href="humans.txt">
+        <!--(if target dev)><!-->
+        <link rel="stylesheet/less" href="less/style.less">
+        <!--<!(endif)-->
+        <!--(if target dist)>
+        <!-- build:css(src) css/style.css -->
+        <link rel="stylesheet" href="../dist/css/style.css">
+        <!(endif)-->
+        <link rel="stylesheet" href="components/olightbox/olightbox.jquery.css">
+        <!-- endbuild -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
+        <!--(if target dev)><!-->
+        <script type="text/javascript" src="components/less.js/dist/less-1.5.0.min.js"></script>
+        <!--<!(endif)-->
     </head>
     <body>
 			<div class="container-fluid" ng-controller="UserCtrl">

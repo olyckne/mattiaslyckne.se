@@ -78,7 +78,6 @@ module.exports = function(grunt) {
          },
          css: {
             files: ['src/less/style.less'],
-            tasks: ['less']
          },
          other: {
             files: ['src/js/*', 'src/index.html']
@@ -116,6 +115,21 @@ module.exports = function(grunt) {
             singleRun: true,
             browsers: ['PhantomJS']
          }
+      },
+      connect: {
+          server: {
+              options: {
+                  port: 8080,
+                  base: './src'
+              }
+          }
+      },
+      targethtml: {
+          dist: {
+              files: {
+                  'dist/index.html': 'dist/index.html'
+              }
+          }
       }
    });
 
@@ -132,7 +146,10 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-text-replace');
 
    grunt.loadNpmTasks('grunt-karma');
+   grunt.loadNpmTasks('grunt-contrib-connect');
+   grunt.loadNpmTasks('grunt-targethtml');
 
     // Default task
-   grunt.registerTask('default', ['karma:continuous', 'clean', 'copy', 'less', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'replace']);
+   grunt.registerTask('default', ['karma:continuous', 'clean', 'copy', 'less', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'replace', 'targethtml:dist']);
+   grunt.registerTask('dev', ['connect', 'watch']);
 };
