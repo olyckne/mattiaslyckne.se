@@ -15,6 +15,7 @@ files = [
 	"components/angular-resource/angular-resource.js",
 	"components/angular-sanitize/angular-sanitize.js",
 	"components/angular-bootstrap/ui-bootstrap-tpls.js",
+	"components/angular-route/angular-route.js",
 	"components/jquery/jquery.js",
 	"components/underscore/underscore.js",
 	"components/olightbox/olightbox.jquery.js",
