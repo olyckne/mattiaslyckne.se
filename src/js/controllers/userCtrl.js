@@ -12,9 +12,6 @@ app.controller('UserCtrl',
 			$scope.user.contactInfo = _.filter(data.contact_info, function(item) {
 				return item.type.name !== "Phone";
 			});
-			$scope.user.phonenumber = _.find(data.contact_info, function(item) {
-				return item.type.name === "Phone";
-			}).info;
 
 			$scope.usernameTooltip();
 		})
