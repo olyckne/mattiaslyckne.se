@@ -159,6 +159,6 @@ module.exports = function(grunt) {
 
 
     // Default task
-   grunt.registerTask('default', ['karma:continuous', 'clean', 'copy', 'less', 'replace', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'processhtml:dist']);
+   grunt.registerTask('default', ['karma:continuous', 'clean', 'copy', 'less', 'replace', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'replace', 'processhtml:dist']);
    grunt.registerTask('dev', ['connect', 'watch']);
 };
