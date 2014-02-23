@@ -7,19 +7,14 @@
         <title>Mattias Lyckne - Developer</title>
         <base href="/">
         <link rel="author" href="humans.txt">
-        <!--(if target dev)><!-->
-        <link rel="stylesheet/less" href="less/style.less">
-        <!--<!(endif)-->
-        <!--(if target dist)>
         <!-- build:css(src) css/style.css -->
-        <link rel="stylesheet" href="../dist/css/style.css">
-        <!(endif)-->
+        <link rel="stylesheet/less" href="less/style.less">
         <link rel="stylesheet" href="components/olightbox/olightbox.jquery.css">
         <!-- endbuild -->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
-        <!--(if target dev)><!-->
+        <!-- build:remove:dist -->
         <script type="text/javascript" src="components/less/dist/less-1.6.2.min.js"></script>
-        <!--<!(endif)-->
+        <!-- /build -->
     </head>
     <body>
 			<div class="container-fluid" ng-controller="UserCtrl">

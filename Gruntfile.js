@@ -100,6 +100,14 @@ module.exports = function(grunt) {
                {
                   from: 'localhost:8888',
                   to: 'api.mattiaslyckne.se'
+               },
+               {
+                  from: 'stylesheet/less',
+                  to: 'stylesheet/css/'
+               },
+               {
+                  from: 'less/style.less',
+                  to: '../dist/css/style.css'
                }
             ]
          }
@@ -124,12 +132,12 @@ module.exports = function(grunt) {
               }
           }
       },
-      targethtml: {
-          dist: {
-              files: {
-                  'dist/index.html': 'dist/index.html'
-              }
-          }
+      processhtml: {
+        dist: {
+            files: {
+                'dist/index.html': ['dist/index.html']
+            }
+        }
       }
    });
 
@@ -147,9 +155,10 @@ module.exports = function(grunt) {
 
    grunt.loadNpmTasks('grunt-karma');
    grunt.loadNpmTasks('grunt-contrib-connect');
-   grunt.loadNpmTasks('grunt-targethtml');
+   grunt.loadNpmTasks('grunt-processhtml');
+
 
     // Default task
-   grunt.registerTask('default', ['karma:continuous', 'clean', 'copy', 'less', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'replace', 'targethtml:dist']);
+   grunt.registerTask('default', ['karma:continuous', 'clean', 'copy', 'less', 'replace', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'processhtml:dist']);
    grunt.registerTask('dev', ['connect', 'watch']);
 };
