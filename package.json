@@ -19,9 +19,10 @@
     "grunt-processhtml": "~0.3.0",
     "less": "~1.6.3",
     "coveralls": "^2.10.0",
-    "grunt-karma-coveralls": "^2.4.3"
+    "grunt-karma-coveralls": "^2.4.3",
+    "grunt-cli": "^0.1.13"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": ".node_modules/grunt-cli/bin/grunt test"
   }
 }
