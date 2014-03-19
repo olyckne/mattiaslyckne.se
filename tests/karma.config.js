@@ -31,8 +31,7 @@ files = [
 ];
 
 preprocessors = {
-	'src/js/*.js': 'coverage',
-	'src/js/controllers/*.js': 'coverage'
+    'js/**/*.js': 'coverage'
 };
 
 // list of files to exclude
@@ -47,7 +46,8 @@ reporters = ['progress', 'coverage'];
 
 coverageReporter = {
   type: 'lcov',
-  dir: '../tests/coverage'
+  dir: '../tests/coverage',
+  file: 'lcov.info'
 };
 
 plugins =  [
