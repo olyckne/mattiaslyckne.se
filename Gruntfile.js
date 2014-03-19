@@ -145,7 +145,7 @@ module.exports = function(grunt) {
             debug: true,
             coverage_dir: 'tests/coverage/',
             dryRun: false,
-            force: false
+            force: true
         }
       }
    });

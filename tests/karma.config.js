@@ -31,13 +31,12 @@ files = [
 ];
 
 preprocessors = {
-	'**/js/*.js': 'coverage',
-	'**/js/controllers/*.js': 'coverage'
+	'src/js/*.js': 'coverage',
+	'src/js/controllers/*.js': 'coverage'
 };
 
 // list of files to exclude
 exclude = [
-
 ];
 
 
