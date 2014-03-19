@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/olyckne/mattiaslyckne.se.png?branch=master)](https://travis-ci.org/olyckne/mattiaslyckne.se)
+[![Coverage
+Status](https://coveralls.io/repos/olyckne/mattiaslyckne.se/badge.png)](https://coveralls.io/r/olyckne/mattiaslyckne.se)
 # mattiaslyckne.se
 Source for my personal website [mattiaslyckne.se](http://mattiaslyckne.se)
 
