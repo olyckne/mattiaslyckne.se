@@ -139,15 +139,22 @@ module.exports = function(grunt) {
             }
         }
       },
-
+/*
       coveralls: {
         options: {
             debug: true,
             coverage_dir: 'tests/coverage/',
-            dryRun: false,
+            dryRun: true,
             force: true
         }
       }
+      */
+     coveralls: {
+        options: {
+            src: 'tests/coverage/**/lcov.info',
+            force: false
+        }
+     }
    });
 
    // These plugins provide necessary tasks.
@@ -165,7 +172,8 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-karma');
    grunt.loadNpmTasks('grunt-contrib-connect');
    grunt.loadNpmTasks('grunt-processhtml');
-   grunt.loadNpmTasks('grunt-karma-coveralls');
+   //grunt.loadNpmTasks('grunt-karma-coveralls');
+   grunt.loadNpmTasks('grunt-coveralls');
 
     // Default task
    grunt.registerTask('default', ['karma:continuous', 'clean', 'copy', 'less', 'replace', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'replace', 'processhtml:dist']);
