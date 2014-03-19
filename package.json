@@ -23,6 +23,6 @@
     "grunt-cli": "^0.1.13"
   },
   "scripts": {
-    "test": ".node_modules/grunt-cli/bin/grunt test"
+    "test": "./node_modules/grunt-cli/bin/grunt test"
   }
 }
