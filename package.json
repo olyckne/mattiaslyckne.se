@@ -2,7 +2,7 @@
   "name": "mattiaslyckne.se",
   "version": "0.5.0",
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "^0.4.4",
     "grunt-usemin": "~0.1.12",
     "grunt-contrib-clean": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
