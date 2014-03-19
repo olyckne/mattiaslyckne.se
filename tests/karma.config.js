@@ -3,35 +3,35 @@
 
 
 // base path, that will be used to resolve files and exclude
-basePath = '../src';
+basePath = '../';
 
 
 // list of files / patterns to load in the browser
 files = [
 	JASMINE,
 	JASMINE_ADAPTER,
-	"components/angular/angular.js",
-	"components/angular-mocks/angular-mocks.js",
-	"components/angular-resource/angular-resource.js",
-	"components/angular-sanitize/angular-sanitize.js",
-	"components/angular-bootstrap/ui-bootstrap-tpls.js",
-	"components/angular-route/angular-route.js",
-	"components/jquery/jquery.js",
-	"components/underscore/underscore.js",
-	"components/olightbox/olightbox.jquery.js",
-    "components/js-md5/js/md5.min.js",
-    "components/bootstrap/dist/js/bootstrap.min.js",
+	"src/components/angular/angular.js",
+	"src/components/angular-mocks/angular-mocks.js",
+	"src/components/angular-resource/angular-resource.js",
+	"src/components/angular-sanitize/angular-sanitize.js",
+	"src/components/angular-bootstrap/ui-bootstrap-tpls.js",
+	"src/components/angular-route/angular-route.js",
+	"src/components/jquery/jquery.js",
+	"src/components/underscore/underscore.js",
+	"src/components/olightbox/olightbox.jquery.js",
+    "src/components/js-md5/js/md5.min.js",
+    "src/components/bootstrap/dist/js/bootstrap.min.js",
 
-	"js/main.js",
-	"js/controllers/*.js",
-	"js/controllers/*.js",
+	"src/js/main.js",
+	"src/js/controllers/*.js",
+	"src/js/controllers/*.js",
 
-	'../tests/mock/**.js',
-	'../tests/**.test.js'
+	'tests/mock/**.js',
+	'tests/**.test.js'
 ];
 
 preprocessors = {
-    'js/**/*.js': 'coverage'
+    'src/js/**/*.js': 'coverage'
 };
 
 // list of files to exclude
@@ -46,7 +46,7 @@ reporters = ['progress', 'coverage'];
 
 coverageReporter = {
   type: 'lcov',
-  dir: '../tests/coverage',
+  dir: 'tests/coverage',
   file: 'lcov.info'
 };
 

@@ -150,8 +150,8 @@ module.exports = function(grunt) {
       }
       */
      coveralls: {
+        src: 'tests/coverage/**/lcov.info',
         options: {
-            src: 'tests/coverage/**/lcov.info',
             force: false
         }
      }
