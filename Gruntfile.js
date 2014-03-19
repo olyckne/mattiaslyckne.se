@@ -138,6 +138,15 @@ module.exports = function(grunt) {
                 'dist/index.html': ['dist/index.html']
             }
         }
+      },
+
+      coveralls: {
+        options: {
+            debug: true,
+            coverage_dir: 'tests/coverage/',
+            dryRun: false,
+            force: false
+        }
       }
    });
 
@@ -156,9 +165,10 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-karma');
    grunt.loadNpmTasks('grunt-contrib-connect');
    grunt.loadNpmTasks('grunt-processhtml');
-
+   grunt.loadNpmTasks('grunt-karma-coveralls');
 
     // Default task
    grunt.registerTask('default', ['karma:continuous', 'clean', 'copy', 'less', 'replace', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'replace', 'processhtml:dist']);
    grunt.registerTask('dev', ['connect', 'watch']);
+   grunt.registerTask('test', ['karma:continuous', 'coveralls']);
 };

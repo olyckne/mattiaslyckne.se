@@ -47,9 +47,13 @@ reporters = ['progress', 'coverage'];
 
 
 coverageReporter = {
-  type: 'html',
+  type: 'lcov',
   dir: '../tests/coverage'
 };
+
+plugins =  [
+    'karma-coverage'
+];
 
 // web server port
 port = 9876;
