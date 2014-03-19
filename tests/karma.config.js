@@ -23,8 +23,8 @@ files = [
     "components/bootstrap/dist/js/bootstrap.min.js",
 
 	"js/main.js",
-	"js/controllers/userCtrl.js",
-	"js/controllers/projectCtrl.js",
+	"js/controllers/*.js",
+	"js/controllers/*.js",
 
 	'../tests/mock/**.js',
 	'../tests/**.test.js'
