@@ -21,6 +21,7 @@ files = [
 	"src/components/olightbox/olightbox.jquery.js",
     "src/components/js-md5/js/md5.min.js",
     "src/components/bootstrap/dist/js/bootstrap.min.js",
+    "src/components/jasmine-jquery/lib/jasmine-jquery.js",
 
 	"src/js/main.js",
 	"src/js/controllers/*.js",
