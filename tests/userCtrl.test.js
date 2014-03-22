@@ -2,6 +2,7 @@ describe("User Controller", function() {
 	var $rootScope, createController, $httpBackend;
 
 	beforeEach(function() {
+        jasmine.getFixtures().fixturesPath = 'base/tests/fixtures';
 		module("Olyckne", "mockUser");
 
 		inject(function($injector) {

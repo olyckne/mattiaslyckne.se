@@ -27,6 +27,7 @@ files = [
 	"src/js/controllers/*.js",
 	"src/js/controllers/*.js",
 
+    { pattern: 'tests/fixtures/**.html', included: false, served: true, watched:false },
 	'tests/mock/**.js',
 	'tests/**.test.js'
 ];
