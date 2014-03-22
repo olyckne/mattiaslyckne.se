@@ -48,4 +48,33 @@ describe("User Controller", function() {
                .toEqual(expected);
     });
 
+    it('should call appendError on error fetching user info', function() {
+        $httpBackend.expect('JSONP',
+                'http://localhost:8888/users/olyckne/contactinfo?callback=JSON_CALLBACK')
+                .respond(404);
+
+        var controller = createController();
+        spyOn($rootScope, 'appendError').andCallThrough();
+        $httpBackend.flush();
+        
+        expect($rootScope.appendError).toHaveBeenCalled();
+    });
+
+    it('should show error message on error fetching user info', function() {
+        jasmine.getFixtures().load('index.html');
+        $rootScope.appendError();
+        expect($(".alert")).toBeVisible();
+        expect($(".alert")).toContainText(
+            "Ooops, something went wrong fetching data");
+
+    });
+
+    it('should show only one error message', function() {
+        loadFixtures('index.html');
+        $rootScope.appendError();
+        $rootScope.appendError();
+        expect($(".alert")).toBeVisible;
+        expect($(".alert")).toHaveLength(1);
+    });
+
 });
