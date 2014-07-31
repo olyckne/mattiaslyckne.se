@@ -29,7 +29,7 @@ app.controller('ProjectCtrl',
 						$location.path('projects/'+group.id);
 					}
 					var path = $location.path().split('/');
-					if($path[1] === "projects") {
+					if(path[1] === "projects") {
 						var id = path[path.length-1];
 						if(group.id === id) {
 							group.open = true;
