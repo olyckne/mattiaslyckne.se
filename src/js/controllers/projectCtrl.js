@@ -28,16 +28,16 @@ app.controller('ProjectCtrl',
 					if (group.open) {
 						$location.path('projects/'+group.id);
 					}
+					var path = $location.path().split('/');
+					if($path[1] === "projects") {
+						var id = path[path.length-1];
+						if(group.id === id) {
+							group.open = true;
+						}
+					}
 				});
 			}, true);
 
-			var path = $location.path().split('/');
-			if(path[1] === "projects") {
-				$scope.$watch('groups['+(path[path.length-1]-1)+']', function(group) {
-
-					group.open=true;
-				});
-			}
 
 			$(".social").tooltip({
 				placement: "bottom"
