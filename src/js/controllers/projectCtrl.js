@@ -3,7 +3,7 @@ app.controller('ProjectCtrl',
 	function($scope, $http, $filter, $location, $sce) {
 	$scope.oneAtATime = true;
 
-	$http({method: 'JSONP', url: baseUrl+'users/olyckne/projects', params: {callback : 'JSON_CALLBACK'}})
+	$http({method: 'JSONP', url: baseUrl+'users/olyckne/projects', params: {sort: 'DESC', callback : 'JSON_CALLBACK'}})
 		.success(function(data, status) {
 			$scope.user.projects = data;
 			$scope.groups = [];
